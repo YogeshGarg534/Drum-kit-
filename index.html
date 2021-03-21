@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drum Kit</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <style type="text/css">
+  
+  body {
+  background-color:#343f56;
+  text-align:center;
+  }
+  
+  
+  h1{
+  color:#e4bad4;
+  font-size:6rem;
+  }
+  
+  .set{
+  padding-top:3rem;
+  padding-bottom:6rem;
+  }
+  
+  
+  button{
+  height :9rem;
+  width: 9rem;
+  font-size:5rem;
+  color:#9b3675;
+  border:10px solid #9b3675;
+  border-radius:12px;
+  margin:1rem;
+  padding-top:2rem;
+  font-weight:bold;
+  }
+  button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  .w {
+  background-image: url("images/crash.png");
+  }
+  .a{
+  background-image: url("images/kick.png");
+  }
+  .s {
+  background-image: url("images/snare.png");
+  }
+  .d {
+  background-image: url("images/tom1.png");
+  }
+  .j {
+  background-image: url("images/tom2.png");
+  }
+  .k {
+  background-image: url("images/tom3.png");
+  }
+  .l {
+  background-image: url("images/tom4.png");
+  }
+  
+  
+  footer{
+  color:white;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </style>
+</head>
+
+<body>
+
+  <h1 id="title">Drum 🥁 Kit</h1>
+  <div class="set">
+    <button class="w drum">w</button>
+    <button class="a drum">a</button>
+    <button class="s drum">s</button>
+    <button class="d drum">d</button>
+    <button class="j drum">j</button>
+    <button class="k drum">k</button>
+    <button class="l drum">l</button>
+  </div>
+
+
+  <footer>
+    Made with ❤️ in India.
+  </footer>
+  
+  <script type="text/javascript">
+  
+  
+  for( var i=0;i<7;i++){
+  document.querySelectorAll(".drum")[i].addEventListener("click",onclick);
+  }
+  function onclick()
+  {
+   var buttoninnerhtml = this.innerHTML;
+
+  switch (buttoninnerhtml) {
+  case "w":
+   var crash = new Audio("sounds/crash.mp3");
+   crash.play();
+  break;
+  
+  case "a":
+   var kick= new Audio("sounds/kick-bass.mp3");
+   kick.play();
+  break;
+  
+  case "s":
+   var snare = new Audio("sounds/snare.mp3");
+   snare.play();
+  break;
+  
+  case "d":
+   var tom1 = new Audio("sounds/tom-1.mp3");
+   tom1.play();
+  break;
+  
+  case "j":
+   var tom2 = new Audio("sounds/tom-2.mp3");
+   tom2.play();
+  break;
+  
+  case "k":
+   var tom3 = new Audio("sounds/tom-3.mp3");
+   tom3.play();
+  break;
+  
+  case "l":
+   var tom4 = new Audio("sounds/tom-4.mp3");
+   tom4.play();
+  break;
+}}  
+  
+  window.addEventListener("keydown", checkkeypress);
+  
+  function checkkeypress(key){
+  
+  if(key.keyCode=="87"){
+  var crash = new Audio("sounds/crash.mp3");
+   crash.play();}
+  
+  if(key.keyCode=="65"){
+  var kick = new Audio("sounds/kick-bass.mp3");
+   kick.play();}
+   
+   if(key.keyCode=="83"){
+  var snare = new Audio("sounds/snare.mp3");
+   snare.play();}
+   
+   if(key.keyCode=="68"){
+  var tom1 = new Audio("sounds/tom-1.mp3");
+   tom1.play();}
+   
+   if(key.keyCode=="74"){
+  var tom2 = new Audio("sounds/tom-2.mp3");
+   tom2.play();}
+   
+   if(key.keyCode=="75"){
+  var tom3 = new Audio("sounds/tom-3.mp3");
+   tom3.play();}
+   
+   if(key.keyCode=="76"){
+  var tom4 = new Audio("sounds/tom-4.mp3");
+   tom4.play();}
+  }
+  
+  
+  
+  
+  </script>
+</body>
+
+</html>
